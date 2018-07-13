@@ -1,0 +1,21 @@
+server:
+  port: 8001
+#  servlet:
+#    context-path: /messages
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pagezero_db
+    username: pagezero
+    password: aneesh
+    platform: postgres
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+
+ #spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+# Hibernate ddl auto (create, create-drop, validate, update)
+    hibernate.ddl-auto: update
